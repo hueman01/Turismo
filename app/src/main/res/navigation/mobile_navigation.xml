@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_atractivos">
+
+    <fragment
+        android:id="@+id/nav_atractivos"
+        android:name="com.castle.turismo.AtractivosTuristicosFragment"
+        android:label="Atractivos Turisticos"
+        tools:layout="@layout/fragment_atractivos_turisticos" >
+        <action
+            android:id="@+id/action_nav_atractivos_to_nuevoAtractivoFragment"
+            app:destination="@id/nuevoAtractivoFragment" />
+        <action
+            android:id="@+id/action_nav_atractivos_to_fotoFragment"
+            app:destination="@id/fotoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_ciudades"
+        android:name="com.castle.turismo.CiudadesFragment"
+        android:label="Ciudades"
+        tools:layout="@layout/fragment_ciudades" >
+        <action
+            android:id="@+id/action_nav_ciudades_to_nuevaCiudadFragment"
+            app:destination="@id/nuevaCiudadFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_regioenes"
+        android:name="com.castle.turismo.RegionesFragment"
+        android:label="Regiones"
+        tools:layout="@layout/fragment_regiones" >
+        <action
+            android:id="@+id/action_nav_regioenes_to_nuevaRegionFragment"
+            app:destination="@id/nuevaRegionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nuevaRegionFragment"
+        android:name="com.castle.turismo.NuevaRegionFragment"
+        android:label="Nueva region"
+        tools:layout="@layout/fragment_nueva_region" />
+    <fragment
+        android:id="@+id/nuevaCiudadFragment"
+        android:name="com.castle.turismo.NuevaCiudadFragment"
+        android:label="Nueva ciudad"
+        tools:layout="@layout/fragment_nueva_ciudad" />
+    <fragment
+        android:id="@+id/nuevoAtractivoFragment"
+        android:name="com.castle.turismo.NuevoAtractivoFragment"
+        android:label="Nuevo atractivo turistico"
+        tools:layout="@layout/fragment_nuevo_atractivo" />
+    <fragment
+        android:id="@+id/fotoFragment"
+        android:name="com.castle.turismo.FotoFragment"
+        android:label="Foto"
+        tools:layout="@layout/fragment_foto" />
+</navigation>
